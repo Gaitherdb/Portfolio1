@@ -1,0 +1,151 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Element Selectors */
+body {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 20px;
+  background-color: #fdf8f5;
+  color: #4f4846;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px 20px 0;
+  background: #13293d;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 50px;
+  padding: 5px 10px 5px 60px;
+  background: pink;
+}
+.backgroundimg {
+height: 400px;
+width: 100%;
+margin-bottom: 25px;
+background-image: url("../images/digital-marketing-meeting.jpg");
+background-size: cover;
+background-position: center;
+}
+main {
+    padding: 60px 0;
+  }
+
+nav li {
+  display: inline-flex;
+  margin: 20px 10px;
+  list-style-type: none;
+  border-bottom: 5px solid purple;
+}
+
+a {
+  color: #fdf8f5;
+  text-decoration: none;
+}
+/*  
+  header,
+  footer {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: #266150;
+  }
+  
+  header {
+    position: fixed;
+    border-bottom: 10px solid #DDAF94;
+  }
+  
+  footer {
+    position: absolute;
+    margin-top: 0;
+    bottom: 0;
+    border-bottom: 10px solid #4F4846;
+    color: #FDF8F5;    
+  }
+  
+  figure {
+    margin-bottom: 40px;
+  }
+  
+  img {
+    display: block;
+    margin: 20px auto;
+  }
+  
+  section {
+    margin-bottom: 0;
+    padding: 20px 10px 40px 10px;
+    border-top: 3px solid #DDAF94;
+    background-color:  #E8CEBF;
+  }
+  
+  form { */
+/* Center the form on the page */
+/* margin: 0 auto;
+    width: 500px;
+    padding: 10px;
+    border: 5px solid #DDAF94;
+    border-radius: 20px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+    
+  input, 
+  textarea {
+    box-sizing: border-box;
+    width: 300px;
+    border: 1px solid #4F4846;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 60px;
+  } */
+
+/* button {
+    height: 40px;
+    width: 120px;
+    background-color: #4F4846;
+    color: #FDF8F5;
+  } */
+
+/* Class Selectors */
+/* .text-center {
+    text-align: center;
+  /* } */
+
+/* .text-right {
+  text-align: right;
+} */
+
+/* Desktop view */
+@media screen and (max-width: 992px) {
+}
+
+/* Large smartphones -*/
+@media screen and (max-width: 768px) {
+}
+/* Small smartphones */
+@media screen and (max-width: 576px) {
+    header h1 {
+        font-size: 30px;
+        display: inline-flex;
+    }
+    nav li {
+        margin: 10px 5px;
+    }
+    /* .main-header {
+        margin: 10px;
+    } */
+
+}
