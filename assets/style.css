@@ -170,6 +170,7 @@ h4 {
   left: 0;
   bottom: 10px;
   padding: 20px;
+  color: black;
   background-color: var(--light-orange);
   font-size: 20px;
 }
