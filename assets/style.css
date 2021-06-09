@@ -1,5 +1,9 @@
 :root {
 --light-orange: #FFD8B3;
+--green: #85CC7E;
+--light-green: #AADFAA;
+--orange: #FEB264;
+--blue: #10385e;
 
 }
 * {
@@ -23,14 +27,15 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px 15px 0;
-  background: #10385e;
+  background: var(--blue);
   color: #fff;
 }
 
 header h1 {
   font-size: 50px;
   padding: 5px 20px 5px 70px;
-  background: pink;
+  background: var(--light-orange);
+  color: black;
 }
 .backgroundimg {
   height: 200px;
@@ -44,7 +49,6 @@ header h1 {
 nav li {
   margin: 20px 10px;
   list-style-type: none;
-  border-bottom: 5px solid purple;
   display: inline;
 }
 
@@ -53,7 +57,7 @@ nav li a {
   text-decoration: none;
 }
 nav a:hover {
-  color: black;
+  color: var(--light-green);
 }
 
 .subheader {
@@ -75,7 +79,7 @@ nav a:hover {
 .aboutmecontent {
   display: flex;
   margin-left: 5px;
-  border-left: 6px solid red;
+  border-left: 6px solid var(--green);
 }
 
 .aside {
@@ -102,7 +106,7 @@ nav a:hover {
   justify-content: space-evenly;
 
   margin-left: 5px;
-  border-left: 6px solid red;
+  border-left: 6px solid var(--green);
 }
 h3 {
   font-size: 65px;
@@ -126,7 +130,7 @@ h3 {
   background-position: center;
 }
 .searchengineimg:hover {
-  color: red;
+  color: var(--light-green);
 }
 .searchengineimg:active {
   font-size: 180%;
@@ -145,7 +149,7 @@ h3 {
   background-position: center;
 }
 .fill-in-img:hover {
-  color: red;
+  color: var(--light-green);
 }
 .fill-in-img:active {
   font-size: 180%;
@@ -159,8 +163,9 @@ h3 {
 .profilepic {
   width: 20%;
   margin: 0 15px 0 15px;
-  border: 6px solid red;
+  border: 6px solid var(--green);
   align-self: center;
+  border-radius: 20px;
 }
 .workimg {
   margin: 0 15px;
@@ -186,7 +191,7 @@ h3 {
   border: 5px black solid;
 }
 .linkborder:hover {
-  border-color: red;
+  border-color: var(--green);
 }
 
 .imgmargin {
@@ -197,7 +202,7 @@ h4 {
   left: 0;
   bottom: 10px;
   padding: 20px;
-  background-color: powderblue;
+  background-color: var(--light-orange);
   font-size: 20px;
 }
 .contactsect {
@@ -208,20 +213,19 @@ h4 {
   justify-content: space-evenly;
   align-items: center;
   margin-left: 5px;
-  border-left: 6px solid red;
+  border-left: 6px solid var(--green);
   width: 100%;
   height: 140px;
 }
 .contactcontent li {
   margin: 20px 10px;
   list-style-type: none;
-  border-bottom: 5px solid purple;
+  border-bottom: 5px solid var(--blue);
 }
 .contactcontent li a {
   color: black;
   text-decoration: none;
 }
-
 .contactaside {
   margin-left: 20px;
   clear: both;
@@ -231,10 +235,8 @@ h4 {
   text-align: right;
 }
 .contactcontent li a:hover {
-  color: red;
+  color: var(--blue);
 }
-
-
 /* Large smartphones -*/
 @media screen and (min-width: 577px) and (max-width: 991px) {
   header {
@@ -351,7 +353,7 @@ h4 {
     font-size: 150%;
     align-items: center;
     margin: 0 10px 0 0;
-    /* /* flex-direction: column; */
+  
   }
   main {
     margin: 5px;
@@ -366,8 +368,6 @@ h4 {
   }
   .workimg {
     margin: 15px 5px;
-  }
-  p {
   }
   .searchengineimg,
   .fill-in-img {
