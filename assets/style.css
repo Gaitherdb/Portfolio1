@@ -21,7 +21,7 @@ body {
   background-color: #fdf8f5;
   color: #4f4846;
 }
-
+/* Uses flex to adjust positioning for text & nav bar */
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -71,17 +71,24 @@ nav a:hover {
 .relative {
   position: relative;
 }
+/* Used flex to match the content border line with about me which was forced to use flex */
 .aboutmesect {
   display: flex;
   margin-bottom: 4%;
 }
-
+/* used flex to put profile pic and text side by side */
 .aboutmecontent {
   display: flex;
   margin-left: 5px;
   border-left: 6px solid var(--green);
 }
-
+.profilepic {
+  width: 20%;
+  margin: 0 15px 0 15px;
+  border: 6px solid var(--green);
+  align-self: center;
+  border-radius: 20px;
+}
 .aside {
   margin-left: 20px;
   clear: both;
@@ -90,15 +97,13 @@ nav a:hover {
   height: 100%;
   text-align: right;
 }
+/* Used flex to adjust positioning. Maybe not neccesary, but if each section doesn't use flex on the section parent, they don't match up */
 .worksect {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 4%;
 }
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
+/* Makes the container relative for the headers and the flex allows the spacing to work */
 .workcontent {
   position: relative;
   display: flex;
@@ -112,16 +117,12 @@ h3 {
   font-size: 65px;
 }
 
-.homeworkimage:active {
-  font-size: 180%;
-  box-shadow: 0 0 10px #000 inset;
+.linkborder {
+  border: 5px black solid;
 }
-
-.homeworkimage:focus {
-  outline: none;
-  border-color: #8ac4ff;
+.linkborder:hover, .searchengineimg:hover, .fill-in-img:hover {
+  border-color: var(--green);
 }
-
 .searchengineimg {
   height: 200x;
   width: 200px;
@@ -129,16 +130,10 @@ h3 {
   background-size: cover;
   background-position: center;
 }
-.searchengineimg:hover {
-  color: var(--light-green);
-}
-.searchengineimg:active {
+
+.linkborder:active, .searchengineimg:active, .fill-in-img:active {
   font-size: 180%;
-  box-shadow: 0 0 10px #000 inset;
-}
-.searchengineimg:focus {
-  outline: none;
-  border-color: #8ac4ff;
+  box-shadow: 10px #000 inset;
 }
 
 .fill-in-img {
@@ -148,55 +143,25 @@ h3 {
   background-size: cover;
   background-position: center;
 }
-.fill-in-img:hover {
-  color: var(--light-green);
-}
-.fill-in-img:active {
-  font-size: 180%;
-  box-shadow: 0 0 10px #000 inset;
-}
-.fill-in-img:focus {
-  outline: none;
-  border-color: #8ac4ff;
-}
 
-.profilepic {
-  width: 20%;
-  margin: 0 15px 0 15px;
-  border: 6px solid var(--green);
-  align-self: center;
-  border-radius: 20px;
-}
 .workimg {
-  margin: 0 15px;
+  margin: 10px 15px 0 15px;
   flex: 2 1;
   border-style: solid;
   border-width: 5px;
 }
+/* gives the link the same right and left margin as the other images */
 .linkproperties {
   margin: 0 15px;
   display: flex;
 }
-.flex {
-  display: flex;
-}
-
+/* makes sure that both the link and homework image have the same flex properties */
 .homework1 {
   flex: 2 0 95%;
   height: 45vh;
   object-fit: cover;
 }
-
-.linkborder {
-  border: 5px black solid;
-}
-.linkborder:hover {
-  border-color: var(--green);
-}
-
-.imgmargin {
-  margin-top: 10px;
-}
+/* Image titles */
 h4 {
   position: absolute;
   left: 0;
@@ -205,9 +170,11 @@ h4 {
   background-color: var(--light-orange);
   font-size: 20px;
 }
+/* Makes it so everything is on the same line */
 .contactsect {
   display: flex;
 }
+/* spaces out the text evenly, centers the text and forces it to go 100% of the container width. and border */
 .contactcontent {
   display: flex;
   justify-content: space-evenly;
@@ -217,6 +184,7 @@ h4 {
   width: 100%;
   height: 140px;
 }
+/* Alters spacing slightly, gives rid of the list style and adds border */
 .contactcontent li {
   margin: 20px 10px;
   list-style-type: none;
@@ -226,19 +194,12 @@ h4 {
   color: black;
   text-decoration: none;
 }
-.contactaside {
-  margin-left: 20px;
-  clear: both;
-  float: left;
-  width: 20%;
-  height: 100%;
-  text-align: right;
-}
 .contactcontent li a:hover {
-  color: var(--blue);
+  color: var(--green);
 }
 /* Large smartphones -*/
 @media screen and (min-width: 577px) and (max-width: 991px) {
+
   header {
     flex-direction: column;
   }
@@ -259,12 +220,12 @@ h4 {
   .subheader {
     padding: 5px;
   }
-  
-
+  /* Allows the aside headers to be on the same line on smaller screens. Could have made both headers display inline as well since I added text align: center */
   .mediascreenflex {
     display: flex;
     justify-content: center;
   }
+  /* gets rid of most properties for aside. text-align is only being used for Work aside */
   .aside {
     margin-left: 0;
     clear: both;
@@ -285,6 +246,7 @@ h4 {
   .profilepic {
     width: 35%;
   }
+  /* reduces main margin */
   main {
     margin: 10px;
   }
