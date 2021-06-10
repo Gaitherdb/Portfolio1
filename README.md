@@ -14,7 +14,7 @@ The first and larger image, Horiseon Refractor, links to my first homework assig
 
 The Contact Me section has a list of links that allow you to contact me and allows you to view personal webpages that represent me.
 
-## Aditional Info
+## Additional Info
 
 ![image](./assets/portfolio1.png)
 
